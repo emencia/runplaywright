@@ -1,0 +1,22 @@
+{
+  "name": "runplaywright",
+  "version": "0.0.5",
+  "description": "A test runner for Playwright",
+  "license": "MIT",
+  "keywords": [
+    "playwright",
+    "test"
+  ],
+  "peerDependencies": {
+    "npx": "^10.2.2"
+  },
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "runtest": "bin/runtest.js",
+    "playtest": "bin/playtest.js",
+    "showtests": "bin/list_tests.js"
+  },
+  "preferGlobal": true
+}
