@@ -5,7 +5,11 @@ const { execute } = require("./exec");
   const baseTestDir = process.cwd() + "/tests/src";
   const data = await execute("ls", [baseTestDir + "/playbooks"]);
   const playbooks = new Set();
-  data.forEach((item) => playbooks.add(item));
+  data.forEach((item) => {
+    if (item.length > 0) {
+      playbooks.add(item)
+    }
+  });
   const sep = "***********************"
   for (const playbook of playbooks) {
     console.log(sep);
