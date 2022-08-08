@@ -2,6 +2,7 @@
   "name": "runplaywright",
   "version": "0.0.6",
   "description": "A test runner for Playwright",
+  "repository": "https://github.com/emencia/runplaywright",
   "license": "MIT",
   "scripts": {
     "showtests": "nodejs bin/list_tests",
