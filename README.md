@@ -17,18 +17,7 @@ npx playwright install
 ## Usage
 
 Individual tests should be located in a `tests/src/tests` folder. They are grouped by 
-playbooks: in `tests/src/playbooks`. Example `tests/` folder structure:
-
-- src
-  - tests/blog
-    - add_post.ts
-    - list_posts.ts
-  - playbooks/blog
-    - blog.spec.ts
-- playwright.config.js
-- playwright.desktop.config.js
-- playwright.dev.config.js
-- playwright.mobile.config.js
+playbooks: in `tests/src/playbooks`. See the [example](tests)
 
 ## Commands
 
