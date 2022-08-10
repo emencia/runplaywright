@@ -16,8 +16,7 @@ npx playwright install
 
 ## Usage
 
-Individual tests should be located in a `tests/src/tests` folder. They are grouped by 
-playbooks: in `tests/src/playbooks`. See the [example](tests)
+The tests are grouped by playbooks in `tests/src`. See the [example](tests)
 
 ## Commands
 
@@ -36,25 +35,25 @@ The `runtest` command run the tests headless. Arguments:
 `playbook`: to run a whole playbook. Example:
 
 ```bash
-runtest -- playbook=blog
+runtest playbook=blog
 ```
 
 `test`: to run a single test. Example:
 
 ```bash
-runtest -- test=blog/add_post
+runtest test=blog/add_post
 ```
 
 `browser`: to run in a specific browser. Example:
 
 ```bash
-runtest -- browser=firefox
+runtest browser=firefox
 ```
 
 `conf`: to run in a specific configuration: desktop or mobile. Example:
 
 ```bash
-runtest -- conf=desktop
+runtest conf=desktop
 ```
 
 ### Run tests in browser
@@ -67,5 +66,5 @@ available in play mode
 It is possible to cumulate the params above. To play a single test in Firefox:
 
 ```bash
-playtest -- test=blog/list_posts browser=firefox
+playtest test=blog/list_posts browser=firefox
 ```
