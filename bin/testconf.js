@@ -21,7 +21,7 @@ function testconf(mode, args) {
   if ("browser" in args) {
     cmdArgs.push(`--project=${args.browser}`)
   }
-  const baseTestDir = process.cwd() + "/tests/src/playbooks";
+  const baseTestDir = process.cwd() + "/tests/src";
   if ("playbook" in args) {
     cmdArgs.push(`${baseTestDir}/${args.playbook}`)
   } else if ("test" in args) {

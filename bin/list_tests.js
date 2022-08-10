@@ -3,7 +3,7 @@ const { execute } = require("./exec");
 
 (async () => {
   const baseTestDir = process.cwd() + "/tests/src";
-  const data = await execute("ls", [baseTestDir + "/playbooks"]);
+  const data = await execute("ls", [baseTestDir]);
   const playbooks = new Set();
   data.forEach((item) => {
     if (item.length > 0) {
@@ -15,7 +15,7 @@ const { execute } = require("./exec");
     console.log(sep);
     console.log(" Playbook " + playbook);
     console.log(sep);
-    const items = await execute("ls", [baseTestDir + "/playbooks/" + playbook]);
+    const items = await execute("ls", [baseTestDir + "/" + playbook]);
     for (const item of items) {
       if (item.endsWith(".spec.ts")) {
         const itemName = item.replace(".spec.ts", "");

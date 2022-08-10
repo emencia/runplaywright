@@ -1,8 +1,7 @@
 # Example
 
-To run the example tests clone the repository. The tests are located
-in the `src/tests` folder and the playbooks that run the tests are in
-the `src/playbook` folder
+To run the example tests clone the repository. The playbooks that run the tests are in
+the `src` folder
 
 ## Dev mode
 
