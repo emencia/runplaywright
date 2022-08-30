@@ -20,15 +20,6 @@ The tests are grouped by playbooks in `tests/src`. See the [example](tests)
 
 ## Commands
 
-### Generate config files
-
-```bash
-cd myproject/tests
-gentestsconf
-```
-
-This will generate default Playwright config files
-
 ### Show all the playbooks and tests available
 
 List all the tests and playbooks in a project:
