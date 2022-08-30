@@ -1,6 +1,6 @@
 {
   "name": "runplaywright",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A test runner for Playwright",
   "repository": "https://github.com/emencia/runplaywright",
   "license": "MIT",
@@ -25,7 +25,8 @@
   "bin": {
     "runtest": "bin/runtest.js",
     "playtest": "bin/playtest.js",
-    "showtests": "bin/list_tests.js"
+    "showtests": "bin/list_tests.js",
+    "gentestsconf": "bin/genconf.js"
   },
   "preferGlobal": true
 }
