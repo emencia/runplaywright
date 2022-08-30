@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const { parseArgs } = require("./utils");
 const { config } = require("./conf/playwright.config");
@@ -34,14 +35,10 @@ function writeConfs(path, baseUrl) {
   console.log("Writen file", filepath);
 }
 
-(async () => {
-  const baseDir = process.cwd();
-  const args = parseArgs(process.argv.slice(2));
-  let base = "http://localhost:5000";
-  if ("base" in args) {
-    base = args.base
-  }
-  console.log("BASE", base);
-  console.log("DIR", baseDir);
-  writeConfs(baseDir, base)
-})();
+const baseDir = process.cwd();
+const args = parseArgs(process.argv.slice(2));
+let base = "http://localhost:5000";
+if ("base" in args) {
+  base = args.base
+}
+writeConfs(baseDir, base)
