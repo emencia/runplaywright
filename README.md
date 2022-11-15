@@ -16,7 +16,7 @@ npx playwright install
 
 ## Usage
 
-The tests are grouped by playbooks in `tests/src`. See the [example](tests)
+The tests are grouped by playbooks in a base folder like `tests/src`. See the [example](tests)
 
 ## Commands
 
