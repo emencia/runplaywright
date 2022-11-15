@@ -3,7 +3,7 @@ const { execute } = require("./exec");
 
 (async () => {
   const baseTestDir = process.cwd() + "/tests/src";
-  const data = await execute("ls", [baseTestDir]);
+  const data = await execute("ls -d */", [baseTestDir]);
   const playbooks = new Set();
   data.forEach((item) => {
     if (item.length > 0) {

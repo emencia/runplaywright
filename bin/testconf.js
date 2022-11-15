@@ -1,5 +1,3 @@
-const allowedRunConfs = ["desktop", "mobile"];
-
 function testconf(mode, args) {
   const cmdArgs = [];
   switch (mode) {
@@ -8,10 +6,6 @@ function testconf(mode, args) {
       break
     case "run":
       if ("conf" in args) {
-        // process the conf arg   
-        if (!allowedRunConfs.includes(args.conf)) {
-          throw new Error(`Unknown conf type ${args.conf}. Must be one of ${allowedRunConfs.join(",")}`)
-        }
         cmdArgs.push(`--config=tests/playwright.${args.conf}.config.js`)
       } else {
         // no conf, run everything
