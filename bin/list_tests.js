@@ -2,12 +2,19 @@
 const { execute } = require("./exec");
 
 (async () => {
-  const baseTestDir = process.cwd() + "/tests/src";
-  const data = await execute("ls -d */", [baseTestDir]);
+  const args = process.argv.slice(2);
+  if (args.length == 0) {
+    console.log("Please provide a path for the tests directory");
+    return
+  }
+  const baseTestDir = process.cwd() + "/" + args[0];
+  const data = await execute("ls", [baseTestDir]);
   const playbooks = new Set();
   data.forEach((item) => {
     if (item.length > 0) {
-      playbooks.add(item)
+      if (!item.endsWith(".ts") && !item.endsWith(".js")) {
+        playbooks.add(item)
+      }
     }
   });
   const sep = "***********************"

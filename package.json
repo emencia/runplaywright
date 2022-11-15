@@ -1,6 +1,6 @@
 {
   "name": "runplaywright",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A test runner for Playwright",
   "repository": "https://github.com/emencia/runplaywright",
   "license": "MIT",
